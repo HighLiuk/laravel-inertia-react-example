@@ -4284,6 +4284,17 @@ function Nav() {
           className: "text-blue-500 hover:underline",
           children: "Settings"
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
+          href: "/logout",
+          method: "POST",
+          as: "button",
+          className: "text-blue-500 hover:underline",
+          data: {
+            foo: "bar"
+          },
+          children: "Logout"
+        })
       })]
     })
   });

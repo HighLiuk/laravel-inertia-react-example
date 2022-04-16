@@ -21,6 +21,18 @@ export default function Nav() {
             Settings
           </Link>
         </li>
+
+        <li>
+          <Link
+            href="/logout"
+            method="POST"
+            as="button"
+            className="text-blue-500 hover:underline"
+            data={{ foo: "bar" }}
+          >
+            Logout
+          </Link>
+        </li>
       </ul>
     </nav>
   )

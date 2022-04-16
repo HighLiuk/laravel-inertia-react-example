@@ -11,3 +11,7 @@ Route::get('/users', function () {
 Route::get('/settings', function () {
     return inertia('Settings');
 });
+
+Route::post('/logout', function () {
+    dd(request('foo'));
+});
