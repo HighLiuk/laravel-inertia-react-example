@@ -19,12 +19,10 @@
     @inertiaHead
 </head>
 
-<body class="font-sans antialiased">
-    @inertia
-
-    @env ('local')
-    <script src="{{ asset('js/bundle.js') }}"></script>
-    @endenv
+<body>
+    <section class="p-8">
+        @inertia
+    </section>
 </body>
 
 </html>

@@ -2,18 +2,24 @@ import { Link } from "@inertiajs/inertia-react"
 
 export default function Nav() {
   return (
-    <nav>
-      <ul>
+    <nav className="mt-6">
+      <ul className="list-disc">
         <li>
-          <Link href="/">Home</Link>
+          <Link href="/" className="text-blue-500 hover:underline">
+            Home
+          </Link>
         </li>
 
         <li>
-          <Link href="/users">Users</Link>
+          <Link href="/users" className="text-blue-500 hover:underline">
+            Users
+          </Link>
         </li>
 
         <li>
-          <Link href="/settings">Settings</Link>
+          <Link href="/settings" className="text-blue-500 hover:underline">
+            Settings
+          </Link>
         </li>
       </ul>
     </nav>
