@@ -1,9 +1,9 @@
 import Nav from "@/Components/Nav"
 
-export default function Home() {
+export default function Settings() {
   return (
     <>
-      <h1>Home</h1>
+      <h1>Settings</h1>
 
       <Nav />
     </>
