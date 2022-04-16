@@ -4411,7 +4411,8 @@ var appName = ((_window$document$getE = window.document.getElementsByTagName("ti
   }
 });
 _inertiajs_progress__WEBPACK_IMPORTED_MODULE_3__.InertiaProgress.init({
-  color: "#4B5563"
+  color: "#ff0000",
+  showSpinner: true
 });
 
 /***/ }),
