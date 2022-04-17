@@ -1,4 +1,5 @@
 import { Link, usePage } from "@inertiajs/inertia-react"
+import NavLink from "./NavLink"
 
 export default function Nav() {
   const { component } = usePage()
@@ -7,51 +8,32 @@ export default function Nav() {
     <nav className="mt-6">
       <ul className="list-disc">
         <li>
-          <Link
-            href="/"
-            className={`
-            text-blue-500 hover:underline
-              ${component === "Home" ? "font-bold underline" : ""}
-            `}
-          >
+          <NavLink href="/" active={component === "Home"}>
             Home
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link
-            href="/users"
-            className={`
-            text-blue-500 hover:underline
-              ${component === "Users" ? "font-bold underline" : ""}
-            `}
-          >
+          <NavLink href="/users" active={component === "Users"}>
             Users
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link
-            href="/settings"
-            className={`
-            text-blue-500 hover:underline
-              ${component === "Settings" ? "font-bold underline" : ""}
-            `}
-          >
+          <NavLink href="/settings" active={component === "Settings"}>
             Settings
-          </Link>
+          </NavLink>
         </li>
 
         <li>
-          <Link
+          <NavLink
             href="/logout"
             method="POST"
             as="button"
-            className="text-blue-500 hover:underline"
             data={{ foo: "bar" }}
           >
             Logout
-          </Link>
+          </NavLink>
         </li>
       </ul>
 
