@@ -34,6 +34,12 @@ export default function Nav() {
           </Link>
         </li>
       </ul>
+
+      <div className="mt-96">
+        <Link href="/" preserveScroll>
+          Refresh
+        </Link>
+      </div>
     </nav>
   )
 }
