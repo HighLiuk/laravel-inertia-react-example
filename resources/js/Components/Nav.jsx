@@ -1,4 +1,4 @@
-import { Link, usePage } from "@inertiajs/inertia-react"
+import { usePage } from "@inertiajs/inertia-react"
 import NavLink from "./NavLink"
 
 export default function Nav() {
@@ -24,24 +24,7 @@ export default function Nav() {
             Settings
           </NavLink>
         </li>
-
-        <li>
-          <NavLink
-            href="/logout"
-            method="POST"
-            as="button"
-            data={{ foo: "bar" }}
-          >
-            Logout
-          </NavLink>
-        </li>
       </ul>
-
-      <div className="mt-96">
-        <Link href="/" preserveScroll>
-          Refresh
-        </Link>
-      </div>
     </nav>
   )
 }
