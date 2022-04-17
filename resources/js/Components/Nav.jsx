@@ -5,8 +5,8 @@ export default function Nav() {
   const { component } = usePage()
 
   return (
-    <nav className="mt-6">
-      <ul className="list-disc">
+    <nav>
+      <ul className="flex space-x-4 list-disc list-inside">
         <li>
           <NavLink href="/" active={component === "Home"}>
             Home
