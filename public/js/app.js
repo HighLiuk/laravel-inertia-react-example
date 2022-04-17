@@ -4262,6 +4262,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Nav() {
+  var _usePage = (0,_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.usePage)(),
+      component = _usePage.component;
+
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("nav", {
     className: "mt-6",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("ul", {
@@ -4269,19 +4272,19 @@ function Nav() {
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
           href: "/",
-          className: "text-blue-500 hover:underline",
+          className: "\n            text-blue-500 hover:underline\n              ".concat(component === "Home" ? "font-bold underline" : "", "\n            "),
           children: "Home"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
           href: "/users",
-          className: "text-blue-500 hover:underline",
+          className: "\n            text-blue-500 hover:underline\n              ".concat(component === "Users" ? "font-bold underline" : "", "\n            "),
           children: "Users"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
           href: "/settings",
-          className: "text-blue-500 hover:underline",
+          className: "\n            text-blue-500 hover:underline\n              ".concat(component === "Settings" ? "font-bold underline" : "", "\n            "),
           children: "Settings"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
