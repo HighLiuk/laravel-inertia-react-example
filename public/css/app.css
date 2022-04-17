@@ -617,6 +617,9 @@ select {
 .ml-6 {
   margin-left: 1.5rem;
 }
+.ml-4 {
+  margin-left: 1rem;
+}
 .flex {
   display: flex;
 }
