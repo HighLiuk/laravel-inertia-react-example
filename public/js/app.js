@@ -24,7 +24,7 @@ function Nav() {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("nav", {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("ul", {
-      className: "flex space-x-4 list-disc list-inside",
+      className: "flex space-x-6",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_NavLink__WEBPACK_IMPORTED_MODULE_1__["default"], {
           href: "/",
@@ -83,7 +83,7 @@ function NavLink(_ref) {
       props = _objectWithoutProperties(_ref, _excluded);
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, _objectSpread(_objectSpread({}, props), {}, {
-    className: "\n    text-blue-500 hover:underline\n      ".concat(active ? "font-bold underline" : "", "\n    "),
+    className: "\n      text-black hover:underline\n      ".concat(active ? "font-bold underline" : "", "\n    "),
     children: children
   }));
 }

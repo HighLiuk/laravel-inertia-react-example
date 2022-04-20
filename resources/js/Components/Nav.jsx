@@ -6,7 +6,7 @@ export default function Nav() {
 
   return (
     <nav>
-      <ul className="flex space-x-4 list-disc list-inside">
+      <ul className="flex space-x-6">
         <li>
           <NavLink href="/" active={component === "Home"}>
             Home

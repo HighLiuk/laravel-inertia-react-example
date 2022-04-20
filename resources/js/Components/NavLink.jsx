@@ -5,7 +5,7 @@ export default function NavLink({ children, active, ...props }) {
     <Link
       {...props}
       className={`
-    text-blue-500 hover:underline
+      text-black hover:underline
       ${active ? "font-bold underline" : ""}
     `}
     >
