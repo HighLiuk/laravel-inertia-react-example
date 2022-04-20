@@ -1,11 +1,16 @@
 import Nav from "@/Components/Nav"
-import { usePage } from "@inertiajs/inertia-react"
+import { Head, usePage } from "@inertiajs/inertia-react"
 
 export default function Default({ children }) {
-  const { auth } = usePage().props
+  const {
+    props: { auth },
+    component,
+  } = usePage()
 
   return (
     <>
+      <Head title={component} />
+
       <section className="p-6 bg-gray-200">
         <header className="flex justify-between">
           <div className="flex items-center">
