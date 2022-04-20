@@ -1,11 +1,15 @@
 <?php
 
+use App\Models\User;
+
 Route::get('/', function () {
     return inertia('Home');
 });
 
 Route::get('/users', function () {
-    return inertia('Users');
+    $users = User::all(['id', 'name']);
+
+    return inertia('Users', compact('users'));
 });
 
 Route::get('/settings', function () {
