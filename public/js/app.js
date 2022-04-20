@@ -4401,13 +4401,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Home() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Layouts_Default__WEBPACK_IMPORTED_MODULE_0__["default"], {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-      className: "text-4xl font-bold",
-      children: "Home"
-    })
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+    className: "text-4xl font-bold",
+    children: "Home"
   });
 }
+
+Home.layout = function (page) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Layouts_Default__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    children: page
+  });
+};
 
 /***/ }),
 
@@ -4427,13 +4431,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Settings() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Layouts_Default__WEBPACK_IMPORTED_MODULE_0__["default"], {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-      className: "text-4xl font-bold",
-      children: "Settings"
-    })
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+    className: "text-4xl font-bold",
+    children: "Settings"
   });
 }
+
+Settings.layout = function (page) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Layouts_Default__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    children: page
+  });
+};
 
 /***/ }),
 
@@ -4453,13 +4461,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Users() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Layouts_Default__WEBPACK_IMPORTED_MODULE_0__["default"], {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
-      className: "text-4xl font-bold",
-      children: "Users"
-    })
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {
+    className: "text-4xl font-bold",
+    children: "Users"
   });
 }
+
+Users.layout = function (page) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_Layouts_Default__WEBPACK_IMPORTED_MODULE_0__["default"], {
+    children: page
+  });
+};
 
 /***/ }),
 
