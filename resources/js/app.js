@@ -11,8 +11,8 @@ const appName =
 
 createInertiaApp({
   title: (title) => `${title} - ${appName}`,
-  resolve: (name) => {
-    const page = require(`./Pages/${name}`).default
+  resolve: async (name) => {
+    const { default: page } = await import(`./Pages/${name}`)
     page.layout ??= (page) => <Default children={page} />
     return page
   },
