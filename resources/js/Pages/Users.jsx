@@ -1,3 +1,4 @@
+import Pagination from "@/Components/Pagination"
 import { Link } from "@inertiajs/inertia-react"
 
 export default function Users({ users }) {
@@ -10,7 +11,7 @@ export default function Users({ users }) {
           <div className="overflow-x-auto">
             <table className="table-auto w-full">
               <tbody className="text-base divide-y divide-gray-100">
-                {users.map((user) => (
+                {users.data.map((user) => (
                   <tr key={user.id}>
                     <td className="px-2 py-3 whitespace-nowrap">
                       <div className="font-medium text-gray-900">
@@ -30,6 +31,8 @@ export default function Users({ users }) {
           </div>
         </div>
       </div>
+
+      <Pagination links={users.links} />
     </>
   )
 }

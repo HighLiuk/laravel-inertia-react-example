@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 Route::get('/users', function () {
-    $users = User::all(['id', 'name']);
+    $users = User::paginate(10, ['id', 'name']);
 
     return inertia('Users', compact('users'));
 });
