@@ -7,9 +7,16 @@ Route::get('/', function () {
 });
 
 Route::get('/users', function () {
-    $users = User::paginate(10, ['id', 'name']);
+    $filter = request('search');
+    $users = User::query()
+        ->when($filter, function ($query, $search) {
+            $query->where('name', 'like', "%$search%");
+        })
+        ->paginate(10, ['id', 'name'])
+        ->withQueryString();
 
-    return inertia('Users', compact('users'));
+
+    return inertia('Users', compact('users', 'filter'));
 });
 
 Route::get('/settings', function () {

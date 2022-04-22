@@ -1,10 +1,15 @@
 import Pagination from "@/Components/Pagination"
+import Search from "@/Components/Search"
 import { Link } from "@inertiajs/inertia-react"
 
-export default function Users({ users }) {
+export default function Users({ users, filter }) {
   return (
     <>
-      <h1 className="text-4xl font-bold mb-4">Users</h1>
+      <div className="flex justify-between mb-4">
+        <h1 className="text-4xl font-bold">Users</h1>
+
+        <Search filter={filter} />
+      </div>
 
       <div className="w-full max-w-2xl mx-auto bg-white shadow-lg rounded-lg border border-gray-200">
         <div className="p-3">
