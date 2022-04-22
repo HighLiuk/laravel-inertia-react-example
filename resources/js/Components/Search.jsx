@@ -1,5 +1,6 @@
 import { Inertia } from "@inertiajs/inertia"
 import { useState } from "react"
+import { DebounceInput } from "react-debounce-input"
 
 export default function Search({ filter }) {
   const [search, setSearch] = useState(filter ?? "")
@@ -16,11 +17,12 @@ export default function Search({ filter }) {
     <div className="flex items-center justify-center">
       <div className="flex items-center max-w-md mx-auto bg-white rounded-lg outline outline-1 outline-gray-500">
         <div className="w-full">
-          <input
+          <DebounceInput
             type="search"
             className="w-full px-4 py-1 text-gray-800 rounded-full border-transparent focus:border-transparent focus:ring-0"
             placeholder="Search..."
             value={search}
+            debounceTimeout={300}
             onChange={handleChange}
           />
         </div>
