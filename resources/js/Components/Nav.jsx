@@ -14,7 +14,7 @@ export default function Nav() {
         </li>
 
         <li>
-          <NavLink href="/users" active={component === "Users"}>
+          <NavLink href="/users" active={component === "Users/Index"}>
             Users
           </NavLink>
         </li>

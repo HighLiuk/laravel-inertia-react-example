@@ -34,7 +34,7 @@ function Nav() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_NavLink__WEBPACK_IMPORTED_MODULE_1__["default"], {
           href: "/users",
-          active: component === "Users",
+          active: component === "Users/Index",
           children: "Users"
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
@@ -307,15 +307,15 @@ var map = {
 		"./resources/js/Pages/Settings.jsx",
 		"resources_js_Pages_Settings_jsx"
 	],
-	"./Users": [
-		"./resources/js/Pages/Users.jsx",
+	"./Users/Index": [
+		"./resources/js/Pages/Users/Index.jsx",
 		"/js/vendor",
-		"resources_js_Pages_Users_jsx"
+		"resources_js_Pages_Users_Index_jsx"
 	],
-	"./Users.jsx": [
-		"./resources/js/Pages/Users.jsx",
+	"./Users/Index.jsx": [
+		"./resources/js/Pages/Users/Index.jsx",
 		"/js/vendor",
-		"resources_js_Pages_Users_jsx"
+		"resources_js_Pages_Users_Index_jsx"
 	]
 };
 function webpackAsyncContext(req) {

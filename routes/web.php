@@ -16,7 +16,7 @@ Route::get('/users', function () {
         ->withQueryString();
 
 
-    return inertia('Users', compact('users', 'filter'));
+    return inertia('Users/Index', compact('users', 'filter'));
 });
 
 Route::get('/settings', function () {
