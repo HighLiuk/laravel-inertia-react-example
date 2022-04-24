@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\UserController;
+use App\Providers\RouteServiceProvider;
 
 Route::middleware('guest')->group(function () {
     Route::resource('login', AuthenticatedSessionController::class)
@@ -10,7 +11,7 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::inertia('/', 'Home')
+    Route::inertia(RouteServiceProvider::HOME, 'Home')
         ->name('home');
 
     Route::resource('users', UserController::class)
