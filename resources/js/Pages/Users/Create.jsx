@@ -1,24 +1,19 @@
-import { Inertia } from "@inertiajs/inertia"
-import { Head } from "@inertiajs/inertia-react"
-import { useState } from "react"
+import { Head, useForm } from "@inertiajs/inertia-react"
 
-export default function Create({ errors }) {
-  const [form, setForm] = useState({
+export default function Create() {
+  const { data, setData, post, errors } = useForm({
     name: "",
     email: "",
     password: "",
   })
 
   function handleChange({ target }) {
-    setForm((values) => ({
-      ...values,
-      [target.id]: target.value,
-    }))
+    setData(target.id, target.value)
   }
 
   function handleSubmit(e) {
     e.preventDefault()
-    Inertia.post(route("users.store"), form)
+    post(route("users.store"))
   }
 
   return (
@@ -34,7 +29,7 @@ export default function Create({ errors }) {
             type="text"
             placeholder="username"
             id="name"
-            value={form.name}
+            value={data.name}
             onChange={handleChange}
           />
         </div>
@@ -47,7 +42,7 @@ export default function Create({ errors }) {
             type="text"
             placeholder="email"
             id="email"
-            value={form.email}
+            value={data.email}
             onChange={handleChange}
           />
         </div>
@@ -60,7 +55,7 @@ export default function Create({ errors }) {
             type="password"
             placeholder="password"
             id="password"
-            value={form.password}
+            value={data.password}
             onChange={handleChange}
           />
         </div>
