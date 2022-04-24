@@ -1,7 +1,7 @@
 import { Head, useForm } from "@inertiajs/inertia-react"
 
 export default function Create() {
-  const { data, setData, post, errors } = useForm({
+  const { data, setData, post, processing, errors } = useForm({
     name: "",
     email: "",
     password: "",
@@ -64,7 +64,14 @@ export default function Create() {
           {errors?.password}
         </div>
 
-        <div className="border rounded mb-4 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">
+        <div
+          className={
+            "border rounded mb-4 text-white " +
+            (processing
+              ? " bg-blue-300 hover:bg-blue-300 cursor-not-allowed"
+              : " bg-blue-500 hover:bg-blue-600 cursor-pointer")
+          }
+        >
           <div className="flex w-max mx-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -84,6 +91,7 @@ export default function Create() {
             <button
               className="border-transparent focus:border-transparent focus:ring-0 px-2 h-full cursor-pointer py-2 text-lg bg-transparent"
               type="submit"
+              disabled={processing}
             >
               Create
             </button>

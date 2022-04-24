@@ -26,6 +26,7 @@ function Create() {
       data = _useForm.data,
       setData = _useForm.setData,
       post = _useForm.post,
+      processing = _useForm.processing,
       errors = _useForm.errors;
 
   function handleChange(_ref) {
@@ -87,7 +88,7 @@ function Create() {
         className: "text-sm mb-4 w-max text-red-400",
         children: errors === null || errors === void 0 ? void 0 : errors.password
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "border rounded mb-4 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer",
+        className: "border rounded mb-4 text-white " + (processing ? " bg-blue-300 hover:bg-blue-300 cursor-not-allowed" : " bg-blue-500 hover:bg-blue-600 cursor-pointer"),
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "flex w-max mx-auto",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
@@ -105,6 +106,7 @@ function Create() {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
             className: "border-transparent focus:border-transparent focus:ring-0 px-2 h-full cursor-pointer py-2 text-lg bg-transparent",
             type: "submit",
+            disabled: processing,
             children: "Create"
           })]
         })
