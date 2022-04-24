@@ -16,7 +16,7 @@ export default function Default({ children }) {
           <div className="flex items-center">
             <h1 className="font-bold text-lg">My App</h1>
 
-            <p className="text-sm ml-4">Welcome Back, {auth.username}!</p>
+            <p className="text-sm ml-4">Welcome Back, {auth.user.name}!</p>
           </div>
 
           <Nav />

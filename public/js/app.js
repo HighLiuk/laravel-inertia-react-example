@@ -109,7 +109,7 @@ function Default(_ref) {
             children: "My App"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
             className: "text-sm ml-4",
-            children: ["Welcome Back, ", auth.username, "!"]
+            children: ["Welcome Back, ", auth.user.name, "!"]
           })]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Components_Nav__WEBPACK_IMPORTED_MODULE_0__["default"], {})]
       })
