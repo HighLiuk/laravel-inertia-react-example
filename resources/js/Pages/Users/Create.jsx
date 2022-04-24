@@ -1,11 +1,31 @@
+import { Inertia } from "@inertiajs/inertia"
 import { Head } from "@inertiajs/inertia-react"
+import { useState } from "react"
 
 export default function Create() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    password: "",
+  })
+
+  function handleChange({ target }) {
+    setForm((values) => ({
+      ...values,
+      [target.id]: target.value,
+    }))
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    Inertia.post("/users", form)
+  }
+
   return (
     <>
       <Head title="Create User" />
 
-      <div className="w-max m-auto">
+      <form className="w-max m-auto" onSubmit={handleSubmit}>
         <h1 className="text-4xl font-bold my-10">Create User</h1>
 
         <div className="flex border rounded text-gray-500 mb-4">
@@ -13,6 +33,9 @@ export default function Create() {
             className="border-transparent focus:border-transparent focus:ring-0 px-4 h-full py-2 text-lg"
             type="text"
             placeholder="username"
+            id="name"
+            value={form.name}
+            onChange={handleChange}
             required
           />
         </div>
@@ -22,6 +45,9 @@ export default function Create() {
             className="border-transparent focus:border-transparent focus:ring-0 px-4 h-full py-2 text-lg"
             type="email"
             placeholder="email"
+            id="email"
+            value={form.email}
+            onChange={handleChange}
             required
           />
         </div>
@@ -31,6 +57,9 @@ export default function Create() {
             className="border-transparent focus:border-transparent focus:ring-0 px-4 h-full py-2 text-lg"
             type="password"
             placeholder="password"
+            id="password"
+            value={form.password}
+            onChange={handleChange}
             required
           />
         </div>
@@ -52,14 +81,15 @@ export default function Create() {
               />
             </svg>
 
-            <input
+            <button
               className="border-transparent focus:border-transparent focus:ring-0 px-2 h-full cursor-pointer py-2 text-lg bg-transparent"
-              type="button"
-              value="Create"
-            />
+              type="submit"
+            >
+              Create
+            </button>
           </div>
         </div>
-      </div>
+      </form>
     </>
   )
 }
