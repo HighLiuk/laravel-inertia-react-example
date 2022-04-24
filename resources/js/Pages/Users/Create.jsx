@@ -2,7 +2,7 @@ import { Inertia } from "@inertiajs/inertia"
 import { Head } from "@inertiajs/inertia-react"
 import { useState } from "react"
 
-export default function Create() {
+export default function Create({ errors }) {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -36,21 +36,23 @@ export default function Create() {
             id="name"
             value={form.name}
             onChange={handleChange}
-            required
           />
         </div>
+
+        <div className="text-sm mb-4 w-max text-red-400">{errors?.name}</div>
 
         <div className="flex border rounded text-gray-500 mb-4">
           <input
             className="border-transparent focus:border-transparent focus:ring-0 px-4 h-full py-2 text-lg"
-            type="email"
+            type="text"
             placeholder="email"
             id="email"
             value={form.email}
             onChange={handleChange}
-            required
           />
         </div>
+
+        <div className="text-sm mb-4 w-max text-red-400">{errors?.email}</div>
 
         <div className="flex border rounded text-gray-500 mb-4">
           <input
@@ -60,8 +62,11 @@ export default function Create() {
             id="password"
             value={form.password}
             onChange={handleChange}
-            required
           />
+        </div>
+
+        <div className="text-sm mb-4 w-max text-red-400">
+          {errors?.password}
         </div>
 
         <div className="border rounded mb-4 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">

@@ -39,7 +39,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function Create() {
+function Create(_ref) {
+  var errors = _ref.errors;
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)({
     name: "",
     email: "",
@@ -49,8 +51,8 @@ function Create() {
       form = _useState2[0],
       setForm = _useState2[1];
 
-  function handleChange(_ref) {
-    var target = _ref.target;
+  function handleChange(_ref2) {
+    var target = _ref2.target;
     setForm(function (values) {
       return _objectSpread(_objectSpread({}, values), {}, _defineProperty({}, target.id, target.value));
     });
@@ -78,20 +80,24 @@ function Create() {
           placeholder: "username",
           id: "name",
           value: form.name,
-          onChange: handleChange,
-          required: true
+          onChange: handleChange
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "text-sm mb-4 w-max text-red-400",
+        children: errors === null || errors === void 0 ? void 0 : errors.name
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "flex border rounded text-gray-500 mb-4",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
           className: "border-transparent focus:border-transparent focus:ring-0 px-4 h-full py-2 text-lg",
-          type: "email",
+          type: "text",
           placeholder: "email",
           id: "email",
           value: form.email,
-          onChange: handleChange,
-          required: true
+          onChange: handleChange
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "text-sm mb-4 w-max text-red-400",
+        children: errors === null || errors === void 0 ? void 0 : errors.email
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "flex border rounded text-gray-500 mb-4",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
@@ -100,9 +106,11 @@ function Create() {
           placeholder: "password",
           id: "password",
           value: form.password,
-          onChange: handleChange,
-          required: true
+          onChange: handleChange
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "text-sm mb-4 w-max text-red-400",
+        children: errors === null || errors === void 0 ? void 0 : errors.password
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "border rounded mb-4 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
