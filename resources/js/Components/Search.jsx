@@ -10,7 +10,10 @@ export default function Search({ filter }) {
     const payload = value ? { search: value } : {}
 
     setSearch(value)
-    Inertia.get("/users", payload, { preserveState: true, replace: true })
+    Inertia.get(route("users.index"), payload, {
+      preserveState: true,
+      replace: true,
+    })
   }
 
   return (

@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\UserController;
 
-Route::inertia('/', 'Home');
+Route::inertia('/', 'Home')
+    ->name('home');
 
 Route::resource('users', UserController::class)
-    ->only(['index', 'create', 'store']);
+    ->only(['index', 'create', 'store', 'edit']);
 
-Route::inertia('/settings', 'Settings');
+Route::inertia('/settings', 'Settings')
+    ->name('settings');

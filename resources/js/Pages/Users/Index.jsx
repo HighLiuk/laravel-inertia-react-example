@@ -13,7 +13,7 @@ export default function Users({ users, filter }) {
 
           <div className="border rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">
             <Link
-              href="/users/create"
+              href={route("users.create")}
               className="border-transparent focus:border-transparent focus:ring-0 px-4 block py-1 cursor-pointer text-lg bg-transparent"
             >
               Create User
@@ -39,7 +39,7 @@ export default function Users({ users, filter }) {
 
                     <td className="px-2 py-3 whitespace-nowrap">
                       <div className="text-base text-right text-indigo-600 hover:text-indigo-900">
-                        <Link href={`/users/${user.id}/edit`}>Edit</Link>
+                        <Link href={route("users.edit", user.id)}>Edit</Link>
                       </div>
                     </td>
                   </tr>

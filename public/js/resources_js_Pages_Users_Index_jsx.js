@@ -95,7 +95,7 @@ function Search(_ref) {
       search: value
     } : {};
     setSearch(value);
-    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.get("/users", payload, {
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.get(route("users.index"), payload, {
       preserveState: true,
       replace: true
     });
@@ -177,7 +177,7 @@ function Users(_ref) {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
           className: "border rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
-            href: "/users/create",
+            href: route("users.create"),
             className: "border-transparent focus:border-transparent focus:ring-0 px-4 block py-1 cursor-pointer text-lg bg-transparent",
             children: "Create User"
           })
@@ -208,7 +208,7 @@ function Users(_ref) {
                     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
                       className: "text-base text-right text-indigo-600 hover:text-indigo-900",
                       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_2__.Link, {
-                        href: "/users/".concat(user.id, "/edit"),
+                        href: route("users.edit", user.id),
                         children: "Edit"
                       })
                     })

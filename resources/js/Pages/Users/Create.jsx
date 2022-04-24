@@ -18,7 +18,7 @@ export default function Create({ errors }) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    Inertia.post("/users", form)
+    Inertia.post(route("users.store"), form)
   }
 
   return (

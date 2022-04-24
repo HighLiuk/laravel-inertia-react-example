@@ -60,7 +60,7 @@ function Create(_ref) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.post("/users", form);
+    _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.post(route("users.store"), form);
   }
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {

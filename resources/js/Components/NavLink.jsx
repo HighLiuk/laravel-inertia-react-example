@@ -1,12 +1,12 @@
 import { Link } from "@inertiajs/inertia-react"
 
-export default function NavLink({ children, active, ...props }) {
+export default function NavLink({ children, name }) {
   return (
     <Link
-      {...props}
+      href={route(name)}
       className={`
       text-black hover:underline
-      ${active ? "font-bold underline" : ""}
+      ${route().current(name) ? "font-bold underline" : ""}
     `}
     >
       {children}
