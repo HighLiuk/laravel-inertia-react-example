@@ -33,6 +33,8 @@ class UserController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', User::class);
+
         return inertia('Users/Create');
     }
 
@@ -44,6 +46,8 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
+        $this->authorize('create', User::class);
+
         User::create($request->validated());
 
         return redirect()->route('users.index');

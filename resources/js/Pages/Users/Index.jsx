@@ -1,8 +1,10 @@
 import Pagination from "@/Components/Pagination"
 import Search from "@/Components/Search"
-import { Head, Link } from "@inertiajs/inertia-react"
+import { Head, Link, usePage } from "@inertiajs/inertia-react"
 
 export default function Users({ users, filter }) {
+  const { can } = usePage().props.auth.user
+
   return (
     <>
       <Head title="Users" />
@@ -11,14 +13,16 @@ export default function Users({ users, filter }) {
         <div className="flex space-x-8 items-center">
           <h1 className="text-4xl font-bold">Users</h1>
 
-          <div className="border rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">
-            <Link
-              href={route("users.create")}
-              className="border-transparent focus:border-transparent focus:ring-0 px-4 block py-1 cursor-pointer text-lg bg-transparent"
-            >
-              Create User
-            </Link>
-          </div>
+          {can.createUsers && (
+            <div className="border rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">
+              <Link
+                href={route("users.create")}
+                className="border-transparent focus:border-transparent focus:ring-0 px-4 block py-1 cursor-pointer text-lg bg-transparent"
+              >
+                Create User
+              </Link>
+            </div>
+          )}
         </div>
 
         <Search filter={filter} />
