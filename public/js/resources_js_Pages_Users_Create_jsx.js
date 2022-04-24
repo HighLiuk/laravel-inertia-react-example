@@ -104,7 +104,7 @@ function Create() {
           required: true
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "border rounded mb-4 bg-blue-600 text-white cursor-pointer",
+        className: "border rounded mb-4 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "flex w-max mx-auto",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("svg", {

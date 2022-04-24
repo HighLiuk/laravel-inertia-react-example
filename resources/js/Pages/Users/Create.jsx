@@ -64,7 +64,7 @@ export default function Create() {
           />
         </div>
 
-        <div className="border rounded mb-4 bg-blue-600 text-white cursor-pointer">
+        <div className="border rounded mb-4 bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">
           <div className="flex w-max mx-auto">
             <svg
               xmlns="http://www.w3.org/2000/svg"
