@@ -19,6 +19,8 @@ Route::get('/users', function () {
     return inertia('Users/Index', compact('users', 'filter'));
 });
 
+Route::inertia('/users/create', 'Users/Create');
+
 Route::get('/settings', function () {
     return inertia('Settings');
 });

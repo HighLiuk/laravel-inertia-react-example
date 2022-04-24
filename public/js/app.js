@@ -307,6 +307,14 @@ var map = {
 		"./resources/js/Pages/Settings.jsx",
 		"resources_js_Pages_Settings_jsx"
 	],
+	"./Users/Create": [
+		"./resources/js/Pages/Users/Create.jsx",
+		"resources_js_Pages_Users_Create_jsx"
+	],
+	"./Users/Create.jsx": [
+		"./resources/js/Pages/Users/Create.jsx",
+		"resources_js_Pages_Users_Create_jsx"
+	],
 	"./Users/Index": [
 		"./resources/js/Pages/Users/Index.jsx",
 		"/js/vendor",
