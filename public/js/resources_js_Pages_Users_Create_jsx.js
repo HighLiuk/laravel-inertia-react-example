@@ -87,10 +87,12 @@ function Create() {
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
         className: "text-sm mb-4 w-max text-red-400",
         children: errors === null || errors === void 0 ? void 0 : errors.password
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "border rounded mb-4 text-white " + (processing ? " bg-blue-300 hover:bg-blue-300 cursor-not-allowed" : " bg-blue-500 hover:bg-blue-600 cursor-pointer"),
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+        className: "w-full border rounded mb-4 text-white " + (processing ? " bg-blue-300 hover:bg-blue-300 cursor-not-allowed" : " bg-blue-500 hover:bg-blue-600 cursor-pointer"),
+        type: "submit",
+        disabled: processing,
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "flex w-max mx-auto",
+          className: "flex justify-center",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             className: "w-5 my-auto",
@@ -103,10 +105,8 @@ function Create() {
               strokeWidth: "2",
               d: "M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
             })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
-            className: "border-transparent focus:border-transparent focus:ring-0 px-2 h-full cursor-pointer py-2 text-lg bg-transparent",
-            type: "submit",
-            disabled: processing,
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+            className: "border-transparent focus:border-transparent focus:ring-0 px-2 h-full py-2 text-lg bg-transparent",
             children: "Create"
           })]
         })

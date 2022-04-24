@@ -64,15 +64,17 @@ export default function Create() {
           {errors?.password}
         </div>
 
-        <div
+        <button
           className={
-            "border rounded mb-4 text-white " +
+            "w-full border rounded mb-4 text-white " +
             (processing
               ? " bg-blue-300 hover:bg-blue-300 cursor-not-allowed"
               : " bg-blue-500 hover:bg-blue-600 cursor-pointer")
           }
+          type="submit"
+          disabled={processing}
         >
-          <div className="flex w-max mx-auto">
+          <div className="flex justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 my-auto"
@@ -88,15 +90,11 @@ export default function Create() {
               />
             </svg>
 
-            <button
-              className="border-transparent focus:border-transparent focus:ring-0 px-2 h-full cursor-pointer py-2 text-lg bg-transparent"
-              type="submit"
-              disabled={processing}
-            >
+            <span className="border-transparent focus:border-transparent focus:ring-0 px-2 h-full py-2 text-lg bg-transparent">
               Create
-            </button>
+            </span>
           </div>
-        </div>
+        </button>
       </form>
     </>
   )
