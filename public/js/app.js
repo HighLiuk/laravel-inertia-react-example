@@ -270,6 +270,14 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Auth/Login": [
+		"./resources/js/Pages/Auth/Login.jsx",
+		"resources_js_Pages_Auth_Login_jsx"
+	],
+	"./Auth/Login.jsx": [
+		"./resources/js/Pages/Auth/Login.jsx",
+		"resources_js_Pages_Auth_Login_jsx"
+	],
 	"./Home": [
 		"./resources/js/Pages/Home.jsx",
 		"resources_js_Pages_Home_jsx"
