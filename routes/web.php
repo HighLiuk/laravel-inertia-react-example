@@ -18,4 +18,9 @@ Route::middleware('auth')->group(function () {
 
     Route::inertia('/settings', 'Settings')
         ->name('settings');
+
+    Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
+        ->name('logout');
 });
+
+Route::get('/logout', fn () => abort(404));

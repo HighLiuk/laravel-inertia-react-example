@@ -15,6 +15,12 @@ export default function Nav() {
         <li>
           <NavLink name="settings">Settings</NavLink>
         </li>
+
+        <li>
+          <NavLink name="logout" as="button" method="POST">
+            Logout
+          </NavLink>
+        </li>
       </ul>
     </nav>
   )

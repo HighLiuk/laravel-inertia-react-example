@@ -35,6 +35,13 @@ function Nav() {
           name: "settings",
           children: "Settings"
         })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("li", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_NavLink__WEBPACK_IMPORTED_MODULE_0__["default"], {
+          name: "logout",
+          as: "button",
+          method: "POST",
+          children: "Logout"
+        })
       })]
     })
   });
@@ -59,9 +66,15 @@ __webpack_require__.r(__webpack_exports__);
 
 function NavLink(_ref) {
   var children = _ref.children,
-      name = _ref.name;
+      name = _ref.name,
+      _ref$as = _ref.as,
+      as = _ref$as === void 0 ? "a" : _ref$as,
+      _ref$method = _ref.method,
+      method = _ref$method === void 0 ? "GET" : _ref$method;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__.Link, {
     href: route(name),
+    as: as,
+    method: method,
     className: "\n      text-black hover:underline\n      ".concat(route().current(name) ? "font-bold underline" : "", "\n    "),
     children: children
   });
