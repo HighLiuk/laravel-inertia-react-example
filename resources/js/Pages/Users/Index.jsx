@@ -6,7 +6,18 @@ export default function Users({ users, filter }) {
   return (
     <>
       <div className="flex justify-between mb-4">
-        <h1 className="text-4xl font-bold">Users</h1>
+        <div className="flex space-x-8 items-center">
+          <h1 className="text-4xl font-bold">Users</h1>
+
+          <div className="border rounded-md bg-blue-500 hover:bg-blue-600 text-white cursor-pointer">
+            <Link
+              href="/users/create"
+              className="border-transparent focus:border-transparent focus:ring-0 px-4 block py-1 cursor-pointer text-lg bg-transparent"
+            >
+              Create User
+            </Link>
+          </div>
+        </div>
 
         <Search filter={filter} />
       </div>
